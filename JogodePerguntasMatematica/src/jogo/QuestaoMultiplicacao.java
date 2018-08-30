@@ -23,25 +23,30 @@ public class QuestaoMultiplicacao {
     }
 
     public int criarPergunta() {
-        String total = JOptionPane.showInputDialog("Quanto é: " + operador1 + " - " + operador2);
+        String total = JOptionPane.showInputDialog("Quanto é: " + operador1 + " * " + operador2);
 
         int totalInt = Integer.parseInt(total);
 
         return totalInt;
     }
     
+    // Verifica se o valor da resposta do usuario esta correta 
     public void verificarResposta(int resposta){
         
-        if (operador1 * operador2 == resposta) {
+        if ((operador1 * operador2) == resposta) {
             JOptionPane.showMessageDialog(null, "Acertou!!");
-            this.pontuacao +=1;
+            this.pontuacao ++;
         } else {
             JOptionPane.showMessageDialog(null, "Errou!!");
-            this.pontuacao -=1;
+            
         }
     } 
     
-    public void exibirResultado(){}// pensar depois com a pontuação
+    // metodo retorna pontuação do tipo de questão
+    public int pontuacaoTotal(){
+        return this.pontuacao;
+        
+    }
     
     
 }

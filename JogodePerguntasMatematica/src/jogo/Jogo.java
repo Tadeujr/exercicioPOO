@@ -17,10 +17,10 @@ public class Jogo {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        QuestaoSoma mat = new QuestaoSoma();
+        start jogo = new start(); // iniciando a classe start para iniciar o jogo
         
-
-        mat.criarPergunta();
+        // em gerarQuestoes() ele recebe a quantidade de pergunta que devemn ser gerarda pelo sistema
+        jogo.gerarQuestoes(5);
         
     }
     
